@@ -1,0 +1,25 @@
+:root {
+  --red: #db4439;
+  --off-white: #fffaef;
+}
+
+/* LANDING PAGE */
+
+.bg_img {
+  height: fit-content;
+  background-color: var(--red);
+}
+
+.header_text {
+  color: var(--off-white);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 7vw;
+}
+
+header h4 {
+  font-size: 5vw;
+}

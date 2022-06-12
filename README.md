@@ -50,10 +50,13 @@ THEN I
 WHEN I 
 THEN a 
 ```
+## URL to the MIRO Board
+
+[MIRO Board Link: https://miro.com/app/board/uXjVOt7CI5E=/](https://miro.com/app/board/uXjVOt7CI5E=/)
 
 ## URL to the GitHub Repository
 
-[GitHub Pages Link:https://github.com/vlad-berka/MTG_EDH_Tracker](https://github.com/vlad-berka/MTG_EDH_Tracker)
+[GitHub Pages Link: https://github.com/vlad-berka/MTG_EDH_Tracker](https://github.com/vlad-berka/MTG_EDH_Tracker)
 
 ## URL to the Heroku Hosted Application
 
