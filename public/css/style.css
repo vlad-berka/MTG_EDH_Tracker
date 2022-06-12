@@ -1,25 +1,45 @@
 :root {
-  --red: #db4439;
-  --off-white: #fffaef;
+  --background-color: grey;
+
 }
 
 /* LANDING PAGE */
 
-.bg_img {
+body {
+  /* background-color: grey; */
+  background-image: linear-gradient(#00101C, #1B244A);
+}
+
+.bg_hdr {
   height: fit-content;
-  background-color: var(--red);
+  /* background-color: var(--background-color); */
 }
 
 .header_text {
-  color: var(--off-white);
+  color: white;
   font-weight: 700;
   text-transform: uppercase;
+  text-shadow: 3px 3px black;
+}
+
+.card_carousel_div {
+  height: 20vh;
 }
 
 header h1 {
-  font-size: 7vw;
+  font-size: 5vw;
+}
+
+header h2 {
+  font-size: 2vw;
+}
+
+header h3 {
+  font-size: 1vw;
+  text-shadow: 0px 0px black;
 }
 
 header h4 {
-  font-size: 5vw;
+  text-shadow: 0px 0px black;
+  font-size: 15px;
 }

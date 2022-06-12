@@ -1,12 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Decks extends Model {}
+class Games extends Model {}
 
-Decks.init(
+Games.init(
   {
     // Unique ID for the category
-    deck_id: {
+    game_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -14,31 +14,29 @@ Decks.init(
     },
     // Name of the category
     // i.e. Appetizers, Main Course, Drinks
-    deck_name: {
+    first_place_deck_id: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    commander_name: {
+    second_place_deck_id: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    play_count: {
-      type: DataTypes.INTEGER,
+    third_place_deck_id: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    // Foreign ID for the user it belongs to
-    owner_id: {
+    fourth_place_deck_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    // Foreign ID for the playgroup it belongs to
+    playgroup_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'user_id',
+        model: 'playgroup',
+        key: 'playgroup_id',
       },
-    },
-    // Date of the order, auto generated
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
   },
   {
@@ -46,8 +44,8 @@ Decks.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'decks',
+    modelName: 'games',
   }
 );
 
-module.exports = Decks;
+module.exports = Games;

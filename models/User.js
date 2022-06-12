@@ -24,16 +24,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
     },
-    phone_number: {
-      type: DataTypes.BIGINT,
+    player_code: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     password: {
