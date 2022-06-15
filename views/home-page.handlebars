@@ -1,11 +1,12 @@
-<div class="container-fluid h-100">
-  <div class="h-100 d-flex flex-column">
+<div class="container-fluid">
+  <div class="d-flex flex-column">
+      
       <header class="row">
         <!-- Jumbotron -->
         <div class="row bg_hdr">
           <div class="col-md-12 col-xs-12 text-center">
             <div class="header_text p-2">
-              <h4 class="mb-2 bg_disclaimer">work in progress!</h3>
+              <br><br>
               <h1 class="mb-3 main_title">MAGIC THE GATHERING</h1>
               <h2 class="mb-3 main_title">Casual EDH Stat Tracker</h2>
               <h3 class="mb-3">Playgroup: Blue Highway Games (Seattle, WA)</h3>
@@ -15,15 +16,41 @@
         <!-- Jumbotron -->
       </header>
 
-    <div class="row pt-5 pb-5 flex-grow-1">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HOME</a>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Change Playgroup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#game_summary">Game History</a>
+              </li>
+              {{!-- <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li> --}}
+            </ul>
+            <span class="navbar-text">
+              Additional Functionality in the Works!
+            </span>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+
       <main>
         <div class="row h-100" id="mainContent">
 
             {{>card_carousel}}
 
         </div>
+
+        {{>game_summary}}
+
       </main>
-    </div>
+
   </div>
 </div>
 
