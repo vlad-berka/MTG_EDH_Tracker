@@ -2,6 +2,7 @@ const User = require('./User');
 const Decks = require('./Decks');
 const PlayGroups = require('./PlayGroups');
 const Games = require('./Games');
+const GameHistory = require('./GameHistory');
 const usersPlaygroups = require('./Users_Playgroups');
 const gamesDecks = require('./Games_Decks');
 
@@ -43,4 +44,13 @@ Decks.belongsToMany(Games, {
   through: gamesDecks,
 });
 
-module.exports = { User, Decks, PlayGroups, Games};
+// Many Playgroups to Many Users
+GameHistory.belongsToMany(Decks, {
+  through: usersPlaygroups,
+});
+
+Decks.belongsToMany(GameHistory, {
+  through: usersPlaygroups,
+});
+
+module.exports = { User, Decks, PlayGroups, GameHistory};

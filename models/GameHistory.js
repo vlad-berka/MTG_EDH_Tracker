@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Games extends Model {}
+class GameHistory extends Model {}
 
-Games.init(
+GameHistory.init(
   {
     // Unique ID for the category
     game_id: {
@@ -15,20 +15,45 @@ Games.init(
     // Name of the category
     // i.e. Appetizers, Main Course, Drinks
     first_place_deck_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     second_place_deck_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     third_place_deck_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     fourth_place_deck_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
+    },
+    first_seat_deck_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    second_seat_deck_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    third_seat_deck_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    fourth_seat_deck_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    game_summary: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    date_played: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     // Foreign ID for the playgroup it belongs to
     playgroup_id: {
@@ -44,8 +69,8 @@ Games.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'games',
+    modelName: 'gameHistory',
   }
 );
 
-module.exports = Games;
+module.exports = GameHistory;

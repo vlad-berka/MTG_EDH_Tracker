@@ -6,7 +6,7 @@ class PlayGroups extends Model {}
 PlayGroups.init(
   {
     // Unique ID for the Playgroup
-    id: {
+    playgroup_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,

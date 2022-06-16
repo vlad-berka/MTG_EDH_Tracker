@@ -14,9 +14,9 @@ const seedDatabase = async () => {
   });
 
   //Loads the deckData with the Decks model into the MTG_EDH_db
-  for (const category of categoryData) {
-    await Categories.create({
-      ...category
+  for (const deck of deckData) {
+    await Decks.create({
+      ...deck
     });
   }
 
