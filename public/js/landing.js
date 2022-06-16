@@ -1,9 +1,9 @@
-// 'login (View Decks)' button
-document
-  .querySelector("#login-btn")
-  .addEventListener("click", loginFormHandler);
+// // 'login (View Decks)' button
+// document
+//   .querySelector("#login-btn")
+//   .addEventListener("click", loginFormHandler);
 
-// 'Signup' button
-document
-  .querySelector("#signup-btn")
-  .addEventListener("click", signupFormHandler);
+// // 'Signup' button
+// document
+//   .querySelector("#signup-btn")
+//   .addEventListener("click", signupFormHandler);

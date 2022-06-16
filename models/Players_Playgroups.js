@@ -1,17 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class usersPlaygroups extends Model {}
+class playersPlaygroups extends Model {}
 
-usersPlaygroups.init(
+playersPlaygroups.init(
   {
     // Unique ID for the category
-    user_id: {
+    player_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "user",
-        key: "user_id",
+        model: "players",
+        key: "player_id",
       },
     },
     playgroup_id: {
@@ -28,8 +28,8 @@ usersPlaygroups.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'gamesDecks',
+    modelName: 'playersPlaygroup',
   }
 );
 
-module.exports = usersPlaygroups;
+module.exports = playersPlaygroups;

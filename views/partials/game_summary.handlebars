@@ -1,7 +1,8 @@
 <!-- Game Summary -->
 <div class="container-fluid justify-content-center d-flex" id="game_summary">
   <div class="col-md-10 text-center test_box">
-    <h2 class="mb-3 header_text">Game History Table</h2>
+    <h2 class="mb-3 header_text">MATCH HISTORY</h2>
+    {{!-- <h2 class="mb-3 header_text">Game History Table</h2> --}}
     <table class="table">
       <thead>
         <tr>
@@ -45,9 +46,28 @@
           <td>Matt</td>
         </tr>
         {{!-- Game 2 --}}
+        {{!-- MULTI GAME  --}}
+        {{#each gameHistory}}
+        <p>intentional break</p>
+        <tr>
+          <th scope="row" class="no_line">{{game_id}}</th>
+          <td class="no_line">{{first_place_deck_id}}</td>
+          <td class="no_line">fasdfasefa</td>
+          <td class="no_line">Alela</td>
+          <td class="no_line">Zaffai</td>
+        </tr>
+        <tr>
+          <th scope="row">05/13/22</th>
+          <td>Vladimir B</td>
+          <td>Christine S.</td>
+          <td>Nathan</td>
+          <td>Matt</td>
+        </tr>
+        {{/each}}
+        {{!-- MULTI GAME --}}
       </tbody>
     </table>
   </div>
 </div>
-  <script src="js/login.js"></script>
+  {{!-- <script src="js/login.js"></script> --}}
 <!-- Game Summary -->

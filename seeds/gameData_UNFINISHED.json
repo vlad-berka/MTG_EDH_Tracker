@@ -1,0 +1,50 @@
+[
+  {
+    "first_place_deck_id": 2,
+    "second_place_deck_id": 1,
+    "third_place_deck_id": 7,
+    "fourth_place_deck_id": 4,
+    "first_seat_deck_id": 4,
+    "second_seat_deck_id": 2,
+    "third_seat_deck_id": 7,
+    "fourth_seat_deck_id": 1,
+    "playgroup_id": 1,
+    "game_summary": "None"
+  },
+  {
+    "first_place_deck_id": 3,
+    "second_place_deck_id": 1,
+    "third_place_deck_id": 4,
+    "fourth_place_deck_id": 2,
+    "first_seat_deck_id": 4,
+    "second_seat_deck_id": 1,
+    "third_seat_deck_id": 3,
+    "fourth_seat_deck_id": 2,
+    "playgroup_id": 1,
+    "game_summary": "None"
+  },
+  {
+    "first_place_deck_id": 6,
+    "second_place_deck_id": 3,
+    "third_place_deck_id": 5,
+    "fourth_place_deck_id": 2,
+    "first_seat_deck_id": 2,
+    "second_seat_deck_id": 5,
+    "third_seat_deck_id": 3,
+    "fourth_seat_deck_id": 6,
+    "playgroup_id": 1,
+    "game_summary": "None"
+  },
+  {
+    "first_place_deck_id": 7,
+    "second_place_deck_id": 6,
+    "third_place_deck_id": 5,
+    "fourth_place_deck_id": 4,
+    "first_seat_deck_id": 4,
+    "second_seat_deck_id": 5,
+    "third_seat_deck_id": 7,
+    "fourth_seat_deck_id": 6,
+    "playgroup_id": 2,
+    "game_summary": "None"
+  }
+]

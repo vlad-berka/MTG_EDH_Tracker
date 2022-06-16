@@ -20,16 +20,16 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    last_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    user_name: {
-      type: DataTypes.STRING,
+    last_initial: {
+      type: DataTypes.CHAR,
       allowNull: false,
     },
     player_code: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    player_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     password: {
