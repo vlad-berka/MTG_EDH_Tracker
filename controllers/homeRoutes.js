@@ -6,6 +6,8 @@ const { helper_function } = require("../utils/helpers");
 // GET for the homepage
 router.get("/", async (req, res) => {
   try {
+    await Games.sync();
+    await Decks.sync();
     await gamesDecks.sync();
     //Find playgroup name
     //Hard coded for playgroup #1, but this should be req.params.id with /:id in the URL

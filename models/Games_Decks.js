@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const { Decks, Games } = require("../models");
 
 class gamesDecks extends Model {}
 
@@ -10,7 +11,7 @@ gamesDecks.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "games",
+        model: Games,
         key: "game_id",
       },
     },
@@ -18,7 +19,7 @@ gamesDecks.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "decks",
+        model: Decks,
         key: "deck_id",
       },
     },

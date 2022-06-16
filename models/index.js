@@ -33,8 +33,6 @@ Games.belongsTo(PlayGroups, {
   foreignKey: 'playgroup_id'
 });
 
-
-
 // Many Playgroups to Many Users
 PlayGroups.belongsToMany(Players, {
   through: playersPlaygroup,
@@ -52,6 +50,5 @@ Games.belongsToMany(Decks, {
 Decks.belongsToMany(Games, {
   through: gamesDecks,
 });
-
 
 module.exports = { User, Decks, Players, PlayGroups, Games, playersPlaygroup, gamesDecks};
