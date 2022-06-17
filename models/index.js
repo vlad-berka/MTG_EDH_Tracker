@@ -4,7 +4,6 @@ const Players = require('./Players');
 const PlayGroups = require('./PlayGroups');
 const Games = require('./Games');
 const playersPlaygroup = require('./Players_Playgroups');
-const gamesDecks = require('./Games_Decks');
 
 // One User to Many Decks
 Players.hasMany(Decks, {
@@ -42,18 +41,4 @@ Players.belongsToMany(PlayGroups, {
   through: playersPlaygroup,
 });
 
-// Many Games to Many Decks
-Games.belongsToMany(Decks, {
-  through: gamesDecks,
-});
-
-Decks.belongsToMany(Games, {
-  through: gamesDecks,
-});
-
-// Decks.hasMany(Games,{
-//   foreignKey: "deck_id"
-// });
-
-module.exports = { User, Decks, Players, PlayGroups, Games, playersPlaygroup, gamesDecks};
-// module.exports = { User, Decks, Players, PlayGroups, Games, playersPlaygroup};
+module.exports = { User, Decks, Players, PlayGroups, Games, playersPlaygroup };

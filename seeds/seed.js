@@ -1,11 +1,12 @@
 const sequelize = require('../config/connection');
-const { Decks, User, PlayGroups, Players , Games} = require('../models');
+const { Decks, User, PlayGroups, Players , Games , playerPlaygroup} = require('../models');
 
 const deckData = require('./deckData.json');
 const playerData = require('./playerData.json');
 const userData = require('./userData.json');
 const gameData = require('./gameData_UNFINISHED.json');
 const playgroupData = require('./playgroupData.json');
+const playerPlaygroupData = require('./playerPlaygroupData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -41,6 +42,13 @@ const seedDatabase = async () => {
   for (const games of gameData) {
     await Games.create({
       ...games
+    });
+  }
+
+  //Loads the many to many playerPlaygroup with the playerPlaygroup model into the mtg_edh_tracker_db
+  for (const merger of playerPlaygroupData) {
+    await playerPlaygroup.create({
+      ...merger
     });
   }
 

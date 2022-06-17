@@ -12,79 +12,15 @@ Games.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    
-    first_place_deck_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'decks',
-        key: 'deck_id',
-      },
-    },
-    second_place_deck_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'decks',
-        key: 'deck_id',
-      },
-    },
-    third_place_deck_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'decks',
-        key: 'deck_id',
-      },
-    },
-    fourth_place_deck_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'decks',
-        key: 'deck_id',
-      },
-    },
-    first_seat_deck_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'decks',
-        key: 'deck_id',
-      },
-    },
-    second_seat_deck_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'decks',
-        key: 'deck_id',
-      },
-    },
-    third_seat_deck_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'decks',
-        key: 'deck_id',
-      },
-    },
-    fourth_seat_deck_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'decks',
-        key: 'deck_id',
-      },
-    },
-    game_summary: {
-      type: DataTypes.TEXT,
+    // CSV String containing the deck id's in win order 1,2,3,4
+    win_order: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    date_played: {
-      type: DataTypes.DATE,
+    // CSV String array containing the deck id's in turn order 3,4,1,2
+    turn_order: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     // Foreign ID for the playgroup it belongs to
     playgroup_id: {

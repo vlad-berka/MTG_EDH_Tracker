@@ -28,8 +28,13 @@ Decks.init(
       allowNull: false,
       defaultValue: 0,
     },
+    win_count: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
     // Foreign ID for the user it belongs to
-    player_id: {
+    owner_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'players',
