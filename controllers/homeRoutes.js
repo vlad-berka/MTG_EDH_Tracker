@@ -6,8 +6,8 @@ const { helper_function } = require("../utils/helpers");
 // GET for the homepage
 router.get("/", async (req, res) => {
   try {
-    // await Games.sync();
-    // await Decks.sync();
+    await Games.sync();
+    await Decks.sync();
     // await gamesDecks.sync();
 
     //Find playgroup name
@@ -32,7 +32,7 @@ router.get("/", async (req, res) => {
       }
     });
 
-    const GameHistory = findGameHistory.get({plain: true});
+    // const GameHistory = findGameHistory.get({plain: true});
     var gameHistory = findGameHistory.map((game) => game.get({ plain: true }));
     console.log("gameHistory is: ", gameHistory);
 
