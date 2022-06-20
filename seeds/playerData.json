@@ -1,31 +1,24 @@
 [
   {
-    "player_id": 1,
     "player_name": "Vladimir B",
     "user_id": 1
   },
   {
-    "player_id": 2,
     "player_name": "Nathan D"
   },
   {
-    "player_id": 3,
     "player_name": "Christine S"
   },
   {
-    "player_id": 4,
     "player_name": "Matt"
   },
   {
-    "player_id": 5,
     "player_name": "Colin G"
   },
   {
-    "player_id": 6,
     "player_name": "Colin H"
   },
   {
-    "player_id": 7,
     "player_name": "Jon"
   }
 ]

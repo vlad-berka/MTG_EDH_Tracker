@@ -1,5 +1,10 @@
 [
   {
+    "win_order": "6,2,4,5",
+    "turn_order": "4,5,2,6",
+    "playgroup_id": 2
+  },
+  {
     "win_order": "1,2,3,4",
     "turn_order": "4,2,3,1",
     "playgroup_id": 1
@@ -18,5 +23,10 @@
     "win_order": "4,5,2,6",
     "turn_order": "6,2,4,5",
     "playgroup_id": 1
+  },
+  {
+    "win_order": "4,5,2,6",
+    "turn_order": "6,2,4,5",
+    "playgroup_id": 2
   }
 ]

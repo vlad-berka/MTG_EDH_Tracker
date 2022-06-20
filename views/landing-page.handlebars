@@ -9,7 +9,8 @@
               <br><br>
               <h1 class="mb-3 main_title">MAGIC THE GATHERING</h1>
               <h2 class="mb-3 main_title">Casual EDH Stat Tracker</h2>
-              <h3 class="mb-3">{{playgroup.group_name}}</h3>
+              <br><br>
+              <h3 class="mb-3 main_title">Select a playgroup from below</h3>
             </div>
           </div>
         </div>
@@ -18,17 +19,17 @@
 
       {{>navbar}}
 
-      <main>
-        <div class="row h-100" id="mainContent">
-
-            {{>card_carousel}}
-
+      <main class="container-fluid justify-content-around d-flex" id="playgroup_list">
+        <div class="col-md-5 text-center groupList_box d-flex justify-content-center align-items-center row">
+          <h3 class="header_text">Playgroup List</h3>
+            {{#each playGroupList}}
+              <div class="col-8 hover_row text-center">
+                <a class="list_anchor" href="/{{playgroup_id}}">{{group_name}}</a>
+              </div>
+            {{/each}}
         </div>
-
-        {{>game_summary}}
-
+        {{>addGroup}}
       </main>
-
   </div>
 </div>
 

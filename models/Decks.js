@@ -12,8 +12,6 @@ Decks.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // Name of the category
-    // i.e. Appetizers, Main Course, Drinks
     deck_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -33,7 +31,7 @@ Decks.init(
       allowNull: false,
       defaultValue: 0,
     },
-    // Foreign ID for the user it belongs to
+    // Foreign ID for the player it belongs to
     owner_id: {
       type: DataTypes.INTEGER,
       references: {

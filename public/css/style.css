@@ -1,6 +1,6 @@
 :root {
   --background-color: grey;
-  --banner-color: #0F051C;
+  --banner-color: #0F051C; /* Purple, 15,5,28 */
 }
 
 /* MAIN PAGE */
@@ -97,6 +97,23 @@ h4 {
   padding-right: 0px;
 }
 
+.groupList_box{
+  background-color: grey;
+  margin: 15px 0px 35px 0;
+  /* padding: 75px, 0px, 75px, 0; */
+  border-radius: 10px;
+  border: solid white 3px;
+  box-shadow: 10px 10px 5px var(--banner-color);
+  /* min-height: 100px; */
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.hover_row:hover {
+  color: var(--background-color);
+  background-color: rgba(15, 5, 28, 0.8);
+}
+
 .card_row {
   margin: 25px, 0px, 25px, 0;
   padding: 25px, 0px, 25px, 0;
@@ -128,6 +145,15 @@ img {
 
 .custom_width {
   max-width: 600px;
+}
+
+.list_anchor {
+  text-decoration: none;
+  color: white;
+}
+
+.list_anchor:hover {
+  color: grey;
 }
 
 p {
