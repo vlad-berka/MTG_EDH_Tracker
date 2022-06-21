@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Decks, PlayGroups, Games, gamesDecks } = require("../models");
+const { User, Decks, PlayGroups, Games, Players, gamesDecks } = require("../models");
 const withAuth = require("../utils/auth");
 const { helper_function } = require("../utils/helpers");
 
@@ -27,10 +27,15 @@ router.get("/playGroups", async(req, res) => {
     const findPlaygroup = await PlayGroups.findAll();
     const playGroupList = findPlaygroup.map((group) => group.get({plain:true}));
 
+    const findPlayers = await Players.findAll();
+    const playerList = findPlayers.map((group) => group.get({plain:true}));
+
     console.log(playGroupList);
+    console.log(playerList);
 
     res.render("landing-page", {
-      playGroupList
+      playGroupList,
+      playerList
     });
   }
   catch(err) {

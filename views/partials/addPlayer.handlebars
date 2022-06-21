@@ -1,0 +1,26 @@
+<!-- Add Group Form -->
+    <div class="col-md-3 text-center groupList_box row d-flex justify-content-center">
+      <h3 class="header_text">Add Player to a Playgroup</h3>
+        <form class="col-md-8">
+          <div class="form-group">
+            <label for="playerList_Dropdown">Select a Player:</label>
+            <select class="form-control" id="playerList_Dropdown">
+              {{#each playerList}}
+                <option>{{player_name}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="playGroup_Dropdown">Add to Playgroup:</label>
+            <select class="form-control" id="playGroup_Dropdown">
+              {{#each playGroupList}}
+                <option>{{group_name}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary" id="add_player_btn">Add!</button>
+        </form>
+    </div>
+<!-- Add Group Form -->

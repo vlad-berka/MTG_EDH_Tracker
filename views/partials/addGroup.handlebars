@@ -1,10 +1,12 @@
 <!-- Add Group Form -->
-    <div class="col-md-5 text-center groupList_box d-flex justify-content-center align-items-center row">
-      <h3 class="header_text">Add a Group</h3>
-        {{#each playGroupList}}
-          <div class="col-8 hover_row text-center">
-            <a class="list_anchor" href="/{{playgroup_id}}">{{group_name}}</a>
-          </div>
-        {{/each}}
+    <div class="col-md-3 text-center groupList_box row d-flex justify-content-center">
+      <h3 class="header_text">Add a New PlayGroup</h3>
+        <form class="col-md-8">
+          <div class="mb-3">
+            <label for="group_name" class="form-label">New Group Name</label>
+            <input type="text" class="form-control" id="group_name" aria-describedby="group_name">
+          </div>   
+          <button type="submit" class="btn btn-primary" id="add_playGroup_btn">Add Playgroup!</button>
+        </form>
     </div>
 <!-- Add Group Form -->

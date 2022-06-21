@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="d-flex flex-column">
+  <div class="d-flex flex-column row justify-content-center">
       
       <header class="row">
         <!-- Jumbotron -->
@@ -10,7 +10,7 @@
               <h1 class="mb-3 main_title">MAGIC THE GATHERING</h1>
               <h2 class="mb-3 main_title">Casual EDH Stat Tracker</h2>
               <br><br>
-              <h3 class="mb-3 main_title">Select a playgroup from below</h3>
+              <h3 class="mb-3 main_title">Select a playgroup from below, or make a new one!</h3>
             </div>
           </div>
         </div>
@@ -19,16 +19,19 @@
 
       {{>navbar}}
 
-      <main class="container-fluid justify-content-around d-flex" id="playgroup_list">
-        <div class="col-md-5 text-center groupList_box d-flex justify-content-center align-items-center row">
+      <main class="container-fluid justify-content-around d-flex align-items-center row" id="playgroup_list">
+        <div class="col-md-3 col-xs-11 row text-center groupList_box justify-content-center d-flex align-items-top">
           <h3 class="header_text">Playgroup List</h3>
             {{#each playGroupList}}
-              <div class="col-8 hover_row text-center">
+              <div class="col-8 hover_row justify-content-between">
                 <a class="list_anchor" href="/{{playgroup_id}}">{{group_name}}</a>
               </div>
             {{/each}}
         </div>
+
         {{>addGroup}}
+        {{>addPlayer}}
+
       </main>
   </div>
 </div>
